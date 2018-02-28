@@ -1,12 +1,14 @@
 package com.codescape.flipper.robot;
 
+import com.codescape.flipper.sql.MySQL;
+
 import java.util.LinkedList;
 
 public class Robot extends Thread {
-	private LinkedList<Trader> traders;
+	private Roster roster;
 	
 	public Robot() {
-		traders = new LinkedList<Trader>();
+		//this.roster(new Roster());
 	}
 	
 	public void run() {
@@ -18,11 +20,5 @@ public class Robot extends Thread {
 		
 	}
 	
-	public void startTrader() {
-		
-	}
-	
-	public void stopTrader() {
-		
-	}
+	public void setRoster(Roster roster) { this.roster = roster; }
 }

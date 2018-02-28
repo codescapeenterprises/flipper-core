@@ -30,11 +30,9 @@ public class Main {
 	
 	public void start() {
 		try {
-			new Server(8888).start();
+			new Server(8888, new Robot()).start();
 		} catch (IOException e) {
 			System.out.println("Couldn't start server, already running?");
 		}
-		
-		new Robot().start();
 	}
 }
