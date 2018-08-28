@@ -1,0 +1,18 @@
+Usage: flipper <options>
+
+[Option] [Parameters] [Explanation]
+
+ -start                Starts flipper, uses default config file
+                       if not 'conf' is set
+
+ -cli     <host>       Starts a command-line interface, specify host
+                       where application is running or connects
+                       locally if leaving parameter blank
+
+ -stop    <host>       Stops flipper, specify host where application
+                       is running or tries to stop local running instance
+                       if leaving parameter blank
+
+ -conf    <file>       Sets the config file to load, specify
+                       file location
+

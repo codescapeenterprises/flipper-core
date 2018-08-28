@@ -1,36 +1,34 @@
 package com.codescape.flipper.robot;
 
-import com.codescape.flipper.sql;
-
-import java.sql.Statement;
 import java.util.LinkedList;
+import java.util.Iterator;
+
+/**
+	Keeps track of Trader(s)
+*/
 
 public class Roster extends LinkedList<Trader> {
-	private MySQL mysql;
-	
-	public Roster(MySQL mysql) {
-		this.setMySQL(mysql);
-	}
-	
-	public Trader get(String idOrName) throws NumberFormatException, NoTraderException {
+	/**
+		Returns Trader by id or name
+	*/
+	public Trader get(String idOrName) throws NoTraderException {
+		Iterator<Trader> iterator = super.iterator();
+		boolean exist = false;
 		Trader trader = null;
 		
-		for (int i = 0; i < size(); i++) {
-			trader = get(i);
+		// Iterate through Roster
+		while (iterator.hasNext() && !exist) {
+			trader = iterator.next();
 			
-			if (trader.getTraderId() == Integer.parseInt(idOrName) || trader.getTraderName().equals(idOrName)) {
-				i = size();
-			} else trader = null;
+			if (String.valueOf(trader.getTraderId()).equals(idOrName) ||
+				trader.getTraderName().equals(idOrName)) {
+				exist = true;
+			}
 		}
 		
-		if (trader == null) throw new NoTraderException("'" + idOrName + "' trader does not exist");
+		// If no Trader exist, throw exception
+		if (!exist) throw new TraderException("'" + idOrName + "' trader does not exist");
 		
 		return(trader);
 	}
-	
-	public loadTrader(String idOrName) {
-		Statement stmt = this.mysql.query("SELECT * FROM `traders` WHERE `id` = '" + idOrName + "' OR `name` = '" + idOrName + "';");
-	}
-	
-	public void setMySQL(MySQL mysql) { this.mysql = mysql; }
 }

@@ -7,6 +7,10 @@ public class Trader extends Thread {
 	private int accountId;
 	private String name;
 	
+	public Trader(int id, int accountId, String name) {
+		
+	}
+	
 	public void run() {
 		
 	}
@@ -15,6 +19,7 @@ public class Trader extends Thread {
 		
 	}
 	
+	public int getAccountId() { return(this.accountId); }
 	public int getTraderId() { return(this.id); }
 	public String getTraderName() { return(this.name); }
 	
