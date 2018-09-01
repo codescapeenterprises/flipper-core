@@ -1,4 +1,4 @@
-package com.codescape.flipper.sql;
+package com.codescape.loki.sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

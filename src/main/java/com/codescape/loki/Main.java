@@ -1,9 +1,9 @@
-package com.codescape.flipper;
+package com.codescape.loki;
 
-import com.codescape.flipper.net.Server;
-import com.codescape.flipper.robot.Robot;
-import com.codescape.flipper.sql.MariaDB;
-import com.codescape.flipper.sql.MariaDBCredentials;
+import com.codescape.loki.net.Server;
+import com.codescape.loki.robot.Robot;
+import com.codescape.loki.sql.MariaDB;
+import com.codescape.loki.sql.MariaDBCredentials;
 
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.*;
 
 /**
- * Main class assembles the application, it's the executable class of flipper.
+ * Main class assembles the application, it's the executable class of loki.
  */
 
 public class Main {
@@ -69,7 +69,7 @@ public class Main {
 				switch (command) {
 					case "start": this.run(true); break;
 					case "cli": this.cli(true); break;
-					case "stop": this.stop(true); break;
+					case "stop": /*this.stop(true);*/ break;
 					case "conf":
 						if (i != (options.length - 1)) this.setConfigFile(options[i + 1]);
 						else throw new ArgumentException("'conf' command needs a parameter"); break;
@@ -191,7 +191,7 @@ public class Main {
 		boolean success = false;
 		
 		try {
-			this.console.print(Console.INFO_TAG + " Starting server at port: ");
+			this.console.print(Console.INFO_TAG + " Handling communication on port: ");
 			this.console.print(Console.bold(this.config.getProperty("port")) + ' ');
 			
 			// Starting Server in a new Thread

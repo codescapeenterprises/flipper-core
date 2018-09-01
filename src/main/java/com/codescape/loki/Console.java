@@ -1,4 +1,4 @@
-package com.codescape.flipper;
+package com.codescape.loki;
 
 // Jansi
 import org.fusesource.jansi.AnsiConsole;
@@ -37,7 +37,7 @@ public class Console {
 		
 		out.print(ansi);
 		
-		return(ansi.flushAttributes().toString());
+		return(ansi.toString());
 	}
 	public void println(String msg) { this.print(String.format(msg + "%n")); }
 	

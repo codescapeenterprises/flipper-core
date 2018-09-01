@@ -1,6 +1,6 @@
-package com.codescape.flipper.robot;
+package com.codescape.loki.robot;
 
-import com.codescape.flipper.market.Order;
+import com.codescape.loki.market.Order;
 
 public class Trader extends Thread {
 	private int id;

@@ -1,4 +1,4 @@
-package com.codescape.flipper.sql;
+package com.codescape.loki.sql;
 
 public class MariaDBCredentials {
 	private String host;

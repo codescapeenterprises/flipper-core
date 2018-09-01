@@ -1,4 +1,4 @@
-package com.codescape.flipper;
+package com.codescape.loki;
 
 public class ArgumentException extends Exception {
 	public ArgumentException(String message) {

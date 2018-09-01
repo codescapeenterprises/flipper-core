@@ -1,2 +1,2 @@
-# flipper-core
+# loki-core
 Cryptocurrency Trading Automation

@@ -1,4 +1,4 @@
-package com.codescape.flipper;
+package com.codescape.loki;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -27,12 +27,18 @@ public class Configuration extends Properties {
 	
 	public boolean validate() throws IOException {
 		Iterator<String> iterator = this.properties.iterator();
+		boolean valid = true;
 		
 		while (iterator.hasNext()) {
 			String property = iterator.next();
 			
-			if (!this.stringPropertyNames().contains(property)) throw new IOException("'" + property + "' is missing in the config file");
+			if (!this.stringPropertyNames().contains(property)) {
+				valid = false;
+				throw new IOException("'" + property + "' is missing in the config file");
+			}
 		}
+		
+		return valid;
 	}
 	
 	public void loadFromFile(String file) throws IOException {

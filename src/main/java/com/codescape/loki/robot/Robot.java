@@ -1,6 +1,6 @@
-package com.codescape.flipper.robot;
+package com.codescape.loki.robot;
 
-import com.codescape.flipper.sql.MariaDB;
+import com.codescape.loki.sql.MariaDB;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -29,7 +29,7 @@ public class Robot implements Runnable {
 		
 		try {
 			Trader trader = this.roster.get(idOrName);
-		} catch (NoTraderException e) {
+		} catch (TraderException e) {
 			
 		}
 		

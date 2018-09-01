@@ -1,4 +1,4 @@
-package com.codescape.flipper.market;
+package com.codescape.loki.market;
 
 public abstract class Order {
 	public static final int SELL = 0;

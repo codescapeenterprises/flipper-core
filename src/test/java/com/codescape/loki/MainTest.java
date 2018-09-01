@@ -1,4 +1,4 @@
-package com.codescape.flipper;
+package com.codescape.loki;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

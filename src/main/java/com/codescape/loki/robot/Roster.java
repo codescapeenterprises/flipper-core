@@ -1,4 +1,4 @@
-package com.codescape.flipper.robot;
+package com.codescape.loki.robot;
 
 import java.util.LinkedList;
 import java.util.Iterator;
@@ -11,7 +11,7 @@ public class Roster extends LinkedList<Trader> {
 	/**
 		Returns Trader by id or name
 	*/
-	public Trader get(String idOrName) throws NoTraderException {
+	public Trader get(String idOrName) throws TraderException {
 		Iterator<Trader> iterator = super.iterator();
 		boolean exist = false;
 		Trader trader = null;
