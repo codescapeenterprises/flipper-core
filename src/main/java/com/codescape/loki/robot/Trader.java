@@ -1,8 +1,9 @@
 package com.codescape.loki.robot;
 
+import com.codescape.loki.Worker;
 import com.codescape.loki.market.Order;
 
-public class Trader extends Thread {
+public class Trader extends Worker implements Runnable {
 	private int id;
 	private int accountId;
 	private String name;

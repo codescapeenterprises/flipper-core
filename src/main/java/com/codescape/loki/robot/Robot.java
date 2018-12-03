@@ -1,12 +1,13 @@
 package com.codescape.loki.robot;
 
+import com.codescape.loki.Worker;
 import com.codescape.loki.sql.MariaDB;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 
-public class Robot implements Runnable {
+public class Robot extends Worker implements Runnable {
 	private Roster roster;
 	private MariaDB sql;
 	

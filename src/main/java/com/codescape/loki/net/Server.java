@@ -1,8 +1,8 @@
 package com.codescape.loki.net;
 
-import  com.codescape.loki.Main;
-import  com.codescape.loki.Worker;
-import  com.codescape.loki.robot.Robot;
+import com.codescape.loki.Main;
+import com.codescape.loki.Worker;
+import com.codescape.loki.robot.Robot;
 
 import java.io.IOException;
 import java.net.ServerSocket;
